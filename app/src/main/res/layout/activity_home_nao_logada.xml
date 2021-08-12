@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeNaoLogadaActivity">
+
+    <ImageView
+        android:id="@+id/imageView_marca_dagua"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:alpha="0.4"
+        android:scaleType="centerCrop"
+        android:src="@drawable/fundonovo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/imageView_logo_lixeira"
+        android:layout_width="267dp"
+        android:layout_height="230dp"
+        android:layout_marginTop="68dp"
+        android:foregroundGravity="center_horizontal"
+        android:src="@drawable/logo_sem_fundo"
+        app:layout_constraintBottom_toTopOf="@+id/text_campo_nome_do_app"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/text_campo_nome_do_app"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:fontFamily="@font/open_sans_bold"
+        android:gravity="center"
+        android:text="Don't\n Waste"
+        android:textColor="@color/black"
+        android:textSize="32sp"
+        app:layout_constraintBottom_toTopOf="@+id/text_campo_nome_complementar_do_app"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView_logo_lixeira" />
+
+    <TextView
+        android:id="@+id/text_campo_nome_complementar_do_app"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/open_sans_bold"
+        android:gravity="center"
+        android:text="organize"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/text_slogan_do_app"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_campo_nome_do_app" />
+
+    <TextView
+        android:id="@+id/text_slogan_do_app"
+        android:layout_width="wrap_content"
+        android:layout_height="109dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="192dp"
+        android:fontFamily="@font/open_sans_bold"
+        android:gravity="center"
+        android:text="Sua despensa inteligente"
+        android:textColor="@color/cor_texto"
+        android:textSize="40dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView_marca_dagua"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/text_campo_nome_complementar_do_app" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_primeiro_acesso"
+        android:layout_width="168dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="16dp"
+        android:alpha="0.8"
+        android:fontFamily="@font/open_sans_bold"
+        android:gravity="center"
+        android:text="Primeiro acesso"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button_login"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent"
+
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_login"
+        android:layout_width="168dp"
+        android:layout_height="48dp"
+        android:layout_margin="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="Login"
+        android:textSize="12sp"
+        android:layout_marginRight="16dp"
+        android:backgroundTint="@color/color_button"
+        android:fontFamily="@font/open_sans_bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/button_primeiro_acesso"
+        app:layout_constraintTop_toTopOf="@id/button_primeiro_acesso"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

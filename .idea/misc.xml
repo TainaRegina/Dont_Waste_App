@@ -3,12 +3,16 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+
         <entry key="..\:/Users/gustavotorres/Documents/Projeto Dont Waste/Dont_Waste_App/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2203125" />
         <entry key="..\:/Users/gustavotorres/Documents/Projeto Dont Waste/Dont_Waste_App/app/src/main/res/drawable/shape_segunda_tela_cadastro.xml" value="0.2203125" />
         <entry key="..\:/Users/gustavotorres/Documents/Projeto Dont Waste/Dont_Waste_App/app/src/main/res/layout/activity_cadastro.xml" value="0.1" />
-        <entry key="..\:/Users/gustavotorres/Documents/Projeto Dont Waste/Dont_Waste_App/app/src/main/res/layout/activity_main.xml" value="0.15896739130434784" />
         <entry key="..\:/Users/gustavotorres/Documents/Projeto Dont Waste/Dont_Waste_App/app/src/main/res/layout/activity_segunda_tela_de_cadastro.xml" value="0.25" />
         <entry key="..\:/Users/gustavotorres/Documents/Projeto Dont Waste/Dont_Waste_App/app/src/main/res/menu/menu_options.xml" value="0.20416666666666666" />
+
+        <entry key="..\:/Users/beatrizlima/Documents/Dont_Waste_App/Dont_Waste_App/app/src/main/res/layout/activity_home_nao_logada.xml" value="0.2015625" />
+        <entry key="..\:/Users/beatrizlima/Documents/Dont_Waste_App/Dont_Waste_App/app/src/main/res/layout/activity_main.xml" value="0.2015625" />
+
       </map>
     </option>
   </component>
