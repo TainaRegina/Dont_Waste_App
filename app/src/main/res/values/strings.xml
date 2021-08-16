@@ -1,4 +1,9 @@
 <resources>
     <string name="app_name">Projeto_Dont_Waste</string>
     <string name="proximo">Próximo</string>
+    <string name="titulo_app_tela_home_nao_logada">Don\'t\n Waste</string>
+    <string name="titulo_complementar_tela_home_nao_logada">organize</string>
+    <string name="subtitulo_tela_home_nao_logada">Sua despensa inteligente</string>
+    <string name="button_tela_home_nao_logada_primeiro_acesso">Primeiro acesso</string>
+    <string name="button_tela_home_nao_logada_login">Login</string>
 </resources>

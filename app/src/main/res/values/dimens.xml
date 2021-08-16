@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="fonte_titulo_app">40sp</dimen>
+    <dimen name="margem_do_titulo_ao_icone_lixeira">16dp</dimen>
+    <dimen name="fonte_titulo_complementar_app">24sp</dimen>
+    <dimen name="margem_entre_subtitulo_e_titulo_complementar">40dp</dimen>
+    <dimen name="fonte_subtitulo">48sp</dimen>
+    <dimen name="largura_button_primeiro_acesso">0dp</dimen>
+    <dimen name="altura_button_primeiro_acesso">48dp</dimen>
+    <dimen name="margem_lateral_button_primeiro_acesso">8dp</dimen>
+    <dimen name="margem_inferior_button_primeiro_acesso">8dp</dimen>
+    <dimen name="largura_button_login">0dp</dimen>
+    <dimen name="altura_button_login">48dp</dimen>
+    <dimen name="margin_lateral_button_login">8dp</dimen>
+    <dimen name="margem_inferior_button_login">8dp</dimen>
+</resources>
