@@ -1,18 +1,12 @@
 package com.example.projeto_dont_waste.activity
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.projeto_dont_waste.R
-import com.example.projeto_dont_waste.databinding.ActivityCadastroBinding
-import com.example.projeto_dont_waste.databinding.ActivitySegundaTelaDeCadastroBinding
-import android.util.Log
 import android.widget.ArrayAdapter
 import com.google.android.material.datepicker.MaterialDatePicker
-import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.activity_segunda_tela_de_cadastro.*
 import java.text.SimpleDateFormat
-import java.util.*
 
 
 class SegundaTelaDeCadastroActivity : AppCompatActivity() {
@@ -53,7 +47,7 @@ class SegundaTelaDeCadastroActivity : AppCompatActivity() {
         //gerencia o spinner(lista de opção) com a quantidade de pessoas que residem na casa
         val itemsPessoas = listOf("1", "2", "3", "Mais de 3")
         val adapterPessoas = ArrayAdapter(this, R.layout.list_item, itemsPessoas)
-        materialAutoCompleteTextView?.setAdapter(adapterPessoas)
+        textView_quantidade_pessoas?.setAdapter(adapterPessoas)
 
         //o date picker, para conseguir puxar o calendario
         val datePicker = MaterialDatePicker.Builder.datePicker() .setTitleText("Selecione a data").build()
@@ -63,25 +57,25 @@ class SegundaTelaDeCadastroActivity : AppCompatActivity() {
 
             val simpleDateFormat = SimpleDateFormat.getDateInstance()
             val dateString = simpleDateFormat.format(it)
-            lastPurchaseEditText.setText(dateString)
+            editText_data_ultima_compra.setText(dateString)
         }
 
         //metodo para o date picker aparecer corretamente
-        lastPurchaseEditText.setOnFocusChangeListener { view, isFocused ->
+        editText_data_ultima_compra.setOnFocusChangeListener { view, isFocused ->
             if (view.isInTouchMode && isFocused) {
                 view.performClick()
             }
         }
 
         //mostrar o date picker ao clicar no edit text
-        lastPurchaseEditText.setOnClickListener {
+        editText_data_ultima_compra.setOnClickListener {
             datePicker.show(supportFragmentManager, "tag")
         }
 
         //genrencia o spinner da frequencia de compras
         val itemsFrequencia = listOf("Semanal", "Quinzenal", "Mensal")
         val adapterFrequencia = ArrayAdapter(this, R.layout.list_item, itemsFrequencia)
-        materialAutoCompleteTextView2?.setAdapter(adapterFrequencia)
+        textInput_frequencia_compras?.setAdapter(adapterFrequencia)
 
 
     }
