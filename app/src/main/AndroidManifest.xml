@@ -12,10 +12,10 @@
         <activity android:name=".MainActivity"
             android:exported="true"/>
         <activity
-            android:name=".activity.SegundaTelaDeCadastroActivity"
+            android:name=".activity.CadastroActivity"
             android:exported="true" />
         <activity
-            android:name=".activity.CadastroActivity"
+            android:name=".activity.SegundaTelaDeCadastroActivity"
             android:exported="true" />
         <activity
             android:name=".activity.HomeNaoLogadaActivity"

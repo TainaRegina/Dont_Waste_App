@@ -1,4 +1,9 @@
 <resources>
     <string name="app_name">Projeto_Dont_Waste</string>
     <string name="proximo">Próximo</string>
+    <string name="name">Nome</string>
+    <string name="residents">Quantas pessoas que residem na casa: </string>
+    <string name="date">Date</string>
+    <string name="shopping_frequency">Com que frequência faz compras?:</string>
+    <string name="date_of_last_purchase">Qual a data da sua última compra?:</string>
 </resources>
