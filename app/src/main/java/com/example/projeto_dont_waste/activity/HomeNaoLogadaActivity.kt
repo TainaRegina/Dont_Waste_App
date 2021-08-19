@@ -3,6 +3,7 @@ package com.example.projeto_dont_waste.activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.databinding.DataBindingUtil
 import com.example.projeto_dont_waste.MainActivity
 import com.example.projeto_dont_waste.R
 import com.example.projeto_dont_waste.databinding.ActivityCadastroBinding
@@ -15,8 +16,7 @@ class HomeNaoLogadaActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityHomeNaoLogadaBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+        binding = DataBindingUtil.setContentView(this,R.layout.activity_home_nao_logada)
 
 
         /** função inicial, transição para telas de cadastro e tela de login
