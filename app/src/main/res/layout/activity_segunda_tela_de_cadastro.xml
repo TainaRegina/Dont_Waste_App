@@ -50,10 +50,9 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@color/white" />
+                    android:background="@color/white"/>
 
             </com.google.android.material.textfield.TextInputLayout>
-
 <!--            // Text Quantidade de pessoas-->
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/edit_quantidade_pessoas"
