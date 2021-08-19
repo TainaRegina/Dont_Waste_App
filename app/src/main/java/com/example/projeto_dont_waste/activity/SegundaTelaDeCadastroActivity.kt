@@ -21,8 +21,6 @@ class SegundaTelaDeCadastroActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_segunda_tela_de_cadastro)
-
         binding = ActivitySegundaTelaDeCadastroBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
@@ -89,7 +87,7 @@ class SegundaTelaDeCadastroActivity : AppCompatActivity() {
     }
 
     fun salvar() {
-        binding.btSalvar.setOnClickListener {
+        binding.btnSalvarSegundaTela.setOnClickListener {
             startActivity(Intent(this, MainActivity::class.java))
             Toast.makeText(this, "Salvo com Sucesso", LENGTH_SHORT).show()
         }
