@@ -8,8 +8,11 @@ import android.widget.Toast.LENGTH_SHORT
 import com.example.projeto_dont_waste.MainActivity
 import com.example.projeto_dont_waste.R
 import android.widget.ArrayAdapter
+import android.widget.Button
+import android.widget.EditText
 import com.example.projeto_dont_waste.databinding.ActivitySegundaTelaDeCadastroBinding
 import com.google.android.material.datepicker.MaterialDatePicker
+import com.google.android.material.textfield.TextInputEditText
 import java.text.SimpleDateFormat
 
 
@@ -43,6 +46,7 @@ class SegundaTelaDeCadastroActivity : AppCompatActivity() {
         val itemsPessoas = listOf("1", "2", "3", "Mais de 3")
         val adapterPessoas = ArrayAdapter(this, R.layout.list_item, itemsPessoas)
         binding.textViewQuantidadePessoas?.setAdapter(adapterPessoas)
+
 
         //o date picker, para conseguir puxar o calendario
         val datePicker =
@@ -79,6 +83,7 @@ class SegundaTelaDeCadastroActivity : AppCompatActivity() {
 
     }
 
+
     fun voltarTelaCadastro() {
         binding.btVoltar.setOnClickListener {
             startActivity(Intent(this, CadastroActivity::class.java))
@@ -86,20 +91,29 @@ class SegundaTelaDeCadastroActivity : AppCompatActivity() {
         }
     }
 
+
     fun salvar() {
-        binding.btnSalvarSegundaTela.setOnClickListener {
+        binding.btSalvar.setOnClickListener {
             startActivity(Intent(this, MainActivity::class.java))
             Toast.makeText(this, "Salvo com Sucesso", LENGTH_SHORT).show()
+
         }
     }
+
 
     fun voltarHome() {
         binding.imageViewHome.setOnClickListener {
             startActivity(Intent(this, HomeNaoLogadaActivity::class.java))
 
         }
+
     }
 }
+
+
+
+
+
 
 
 

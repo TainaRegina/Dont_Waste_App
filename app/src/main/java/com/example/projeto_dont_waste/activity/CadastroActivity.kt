@@ -50,12 +50,10 @@ class CadastroActivity : AppCompatActivity() {
 
     fun proximoCadastro() {
         binding.buttonProximoCadastro.setOnClickListener {
-
-            if (binding.viewmodel!!.validaEmail()){
-                startActivity(Intent(this, SegundaTelaDeCadastroActivity::class.java))
-            }
+            startActivity(Intent(this, SegundaTelaDeCadastroActivity::class.java))
         }
     }
+
 
     fun ajuda() {
         binding.imageViewEsquecisenha.setOnClickListener {
@@ -68,6 +66,7 @@ class CadastroActivity : AppCompatActivity() {
         }
     }
 }
+
 
 
 
