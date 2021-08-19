@@ -124,7 +124,7 @@
                 android:paddingLeft="16dp"
                 android:paddingRight="16dp"
                 android:layout_margin="16dp"
-                android:text="Voltar"
+                android:text="@string/voltar_segunda_tela"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintLeft_toLeftOf="parent"/>
 
@@ -136,7 +136,7 @@
                 android:backgroundTint="@color/color_button"
                 android:paddingLeft="16dp"
                 android:paddingRight="16dp"
-                android:text="Salvar"
+                android:text="@string/salvar_segunda_tela"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintRight_toRightOf="parent"/>
 

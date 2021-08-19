@@ -6,4 +6,13 @@
     <string name="date">Date</string>
     <string name="shopping_frequency">Com que frequência faz compras?:</string>
     <string name="date_of_last_purchase">Qual a data da sua última compra?:</string>
+    <string name="dont_waste">Don\'t\n Waste</string>
+    <string name="organize">organize</string>
+    <string name="sua_despensa_inteligente">Sua despensa inteligente</string>
+    <string name="primeiro_acesso">Primeiro acesso</string>
+    <string name="login">Login</string>
+    <string name="email_login">Email</string>
+    <string name="senha_login">Senha</string>
+    <string name="voltar_segunda_tela">Voltar</string>
+    <string name="salvar_segunda_tela">Salvar</string>
 </resources>

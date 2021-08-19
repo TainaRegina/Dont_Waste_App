@@ -89,7 +89,7 @@ class SegundaTelaDeCadastroActivity : AppCompatActivity() {
     }
 
     fun salvar() {
-        binding.btSalvar.setOnClickListener {
+        binding.btnSalvarSegundaTela.setOnClickListener {
             startActivity(Intent(this, MainActivity::class.java))
             Toast.makeText(this, "Salvo com Sucesso", LENGTH_SHORT).show()
         }
