@@ -5,22 +5,13 @@
       <map>
         <entry key="..\:/Users/beatrizlima/Documents/Dont_Waste_App/Dont_Waste_App/app/src/main/res/layout/activity_home_nao_logada.xml" value="0.2015625" />
         <entry key="..\:/Users/beatrizlima/Documents/Dont_Waste_App/Dont_Waste_App/app/src/main/res/layout/activity_main.xml" value="0.2015625" />
-        <entry key="..\:/Users/gustavotorres/Documents/Projeto BRQ/Dont_Waste_App/app/src/main/res/layout/activity_cadastro.xml" value="0.12771739130434784" />
+        <entry key="..\:/Users/gustavotorres/Documents/Projeto BRQ/Dont_Waste_App/app/src/main/res/layout/activity_cadastro.xml" value="0.33" />
         <entry key="..\:/Users/gustavotorres/Documents/Projeto BRQ/Dont_Waste_App/app/src/main/res/layout/activity_home_nao_logada.xml" value="0.12771739130434784" />
         <entry key="..\:/Users/gustavotorres/Documents/Projeto BRQ/Dont_Waste_App/app/src/main/res/layout/activity_segunda_tela_de_cadastro.xml" value="0.25" />
+        <entry key="..\:/Users/gustavotorres/Documents/Projeto BRQ/Dont_Waste_App/app/src/main/res/layout/activity_splash.xml" value="0.12771739130434784" />
         <entry key="..\:/Users/gustavotorres/Documents/Projeto BRQ/Dont_Waste_App/app/src/main/res/layout/list_item.xml" value="0.12771739130434784" />
-        <entry key="..\:/Users/tallesmello/OneDrive - BRQ/Documentos/Dont_Waste_App/app/src/main/res/drawable/bordar_costumizado.xml" value="0.3828125" />
-        <entry key="..\:/Users/tallesmello/OneDrive - BRQ/Documentos/Dont_Waste_App/app/src/main/res/layout-v21/activity_home_nao_logada.xml" value="0.36666666666666664" />
-        <entry key="..\:/Users/tallesmello/OneDrive - BRQ/Documentos/Dont_Waste_App/app/src/main/res/layout-v21/activity_segunda_tela_de_cadastro.xml" value="0.36666666666666664" />
-        <entry key="..\:/Users/tallesmello/OneDrive - BRQ/Documentos/Dont_Waste_App/app/src/main/res/layout/activity_cadastro.xml" value="0.33" />
-        <entry key="..\:/Users/tallesmello/OneDrive - BRQ/Documentos/Dont_Waste_App/app/src/main/res/layout/activity_home_nao_logada.xml" value="0.33" />
-        <entry key="..\:/Users/tallesmello/OneDrive - BRQ/Documentos/Dont_Waste_App/app/src/main/res/layout/activity_segunda_tela_de_cadastro.xml" value="0.33" />
-        <entry key="..\:/Users/tallesmello/OneDrive - BRQ/Documentos/Dont_Waste_App/app/src/main/res/layout/activity_splash.xml" value="0.25" />
       </map>
     </option>
-  </component>
-  <component name="ProjectPlainTextFileTypeManager">
-    <file url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_splash.xml" />
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />

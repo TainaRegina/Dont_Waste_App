@@ -17,11 +17,12 @@ class CadastroActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityCadastroBinding
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityCadastroBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+
 
 
         /**transição para segunda tela de cadastro e retorno ao home
@@ -43,7 +44,16 @@ class CadastroActivity : AppCompatActivity() {
 
     fun proximoCadastro() {
         binding.buttonProximoCadastro.setOnClickListener {
-            startActivity(Intent(this, SegundaTelaDeCadastroActivity::class.java))
+            val email = binding.editTextEmail.text.toString()
+            val senha = binding.editTextSenha.text.toString()
+
+            if(email.isEmpty() || senha.isEmpty()){
+                Toast.makeText(this, "Preencha todos os dados", Toast.LENGTH_SHORT).show()
+            }else{
+                startActivity(Intent(this, SegundaTelaDeCadastroActivity::class.java))
+                Toast.makeText(this, "Salvo com Sucesso", Toast.LENGTH_SHORT).show()
+            }
+
         }
     }
 

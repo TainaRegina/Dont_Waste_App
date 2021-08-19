@@ -17,7 +17,7 @@ class SegundaTelaDeCadastroActivity : AppCompatActivity() {
 
 
     private lateinit var binding: ActivitySegundaTelaDeCadastroBinding
-
+    private lateinit var nome: String
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -82,7 +82,7 @@ class SegundaTelaDeCadastroActivity : AppCompatActivity() {
     }
 
     fun voltarTelaCadastro() {
-        binding.btVoltar.setOnClickListener {
+        binding.btnVoltarSegundaTela.setOnClickListener {
             startActivity(Intent(this, CadastroActivity::class.java))
 
         }
@@ -90,8 +90,19 @@ class SegundaTelaDeCadastroActivity : AppCompatActivity() {
 
     fun salvar() {
         binding.btnSalvarSegundaTela.setOnClickListener {
-            startActivity(Intent(this, MainActivity::class.java))
-            Toast.makeText(this, "Salvo com Sucesso", LENGTH_SHORT).show()
+            val nome = binding.editTextNomeCadastro?.text.toString()
+            val pessoas = binding.textViewQuantidadePessoas.text.toString()
+            val data = binding.editTextDataUltimaCompra.text.toString()
+            val compras = binding.textInputFrequenciaCompras.text.toString()
+
+            if (nome.isEmpty() || pessoas.isEmpty() || data.isEmpty() || compras.isEmpty()){
+                Toast.makeText(this, "Preencha todos os dados", Toast.LENGTH_SHORT).show()
+            }else{
+                startActivity(Intent(this, MainActivity::class.java ))
+                Toast.makeText(this, "Salvo com Sucesso", LENGTH_SHORT).show()
+            }
+
+
         }
     }
 
