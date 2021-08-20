@@ -23,13 +23,14 @@ class CadastroActivity : AppCompatActivity() {
     private lateinit var binding: ActivityCadastroBinding
     private lateinit var viewModel: ViewModelCadastro
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = inflate(layoutInflater)
         setContentView(binding.root)
         viewModel = ViewModelProvider(this).get(ViewModelCadastro::class.java)
         binding.viewmodel = viewModel
+
+
 
         /**transição para segunda tela de cadastro e retorno ao home
          * @author Tainá e Betriz
@@ -50,7 +51,16 @@ class CadastroActivity : AppCompatActivity() {
 
     fun proximoCadastro() {
         binding.buttonProximoCadastro.setOnClickListener {
-            startActivity(Intent(this, SegundaTelaDeCadastroActivity::class.java))
+            val email = binding.editTextEmail.text.toString()
+            val senha = binding.editTextSenha.text.toString()
+
+            if(email.isEmpty() || senha.isEmpty()){
+                Toast.makeText(this, "Preencha todos os dados", Toast.LENGTH_SHORT).show()
+            }else{
+                startActivity(Intent(this, SegundaTelaDeCadastroActivity::class.java))
+                Toast.makeText(this, "Salvo com Sucesso", Toast.LENGTH_SHORT).show()
+            }
+
         }
     }
 

@@ -2,12 +2,16 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
 <<<<<<< HEAD
+<<<<<<< HEAD
     xmlns:tools="http://schemas.android.com/tools"
      >
 
 =======
     xmlns:tools="http://schemas.android.com/tools">
 >>>>>>> 8d05403 (Subindo as ultimas atualizações dos layouts)
+=======
+    xmlns:tools="http://schemas.android.com/tools">
+>>>>>>> feature_validacao
 <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
