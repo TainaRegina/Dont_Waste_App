@@ -11,18 +11,23 @@
         android:theme="@style/Theme.Projeto_Dont_Waste" >
         <activity
             android:name=".activity.SplashActivity"
+            android:screenOrientation="portrait"
             android:exported="true" />
         <activity
             android:name=".MainActivity"
+            android:screenOrientation="portrait"
             android:exported="true" />
         <activity
             android:name=".activity.CadastroActivity"
+            android:screenOrientation="portrait"
             android:exported="true" />
         <activity
             android:name=".activity.SegundaTelaDeCadastroActivity"
+            android:screenOrientation="portrait"
             android:exported="true" />
         <activity
             android:name=".activity.HomeNaoLogadaActivity"
+            android:screenOrientation="portrait"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -3,17 +3,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <data>
-
-    <variable
-        name="Nome"
-        type="com.example.projeto_dont_waste.model.Cadastro" />
-
-
-
-    </data>
-
-
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -48,47 +37,23 @@
                 app:layout_constraintTop_toBottomOf="@+id/imageView_home"/>
 
 <!--            // EditText Nome-->
-
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/txt_nome_cadastro"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="16dp"
-                android:layout_marginTop="64dp"
-                android:layout_marginRight="16dp"
+                android:layout_margin="16dp"
                 android:hint="@string/name"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/imageView_user_segunda_tela">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/editText_nome_cadastro"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@{Nome.component3()}"/>
+                    android:background="@color/white" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
-
-<!--            <com.google.android.material.textfield.TextInputLayout-->
-<!--                android:id="@+id/txt_nome_cadastro"-->
-<!--                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_margin="16dp"-->
-<!--                android:hint="@string/name"-->
-<!--                app:layout_constraintLeft_toLeftOf="parent"-->
-<!--                app:layout_constraintRight_toRightOf="parent"-->
-<!--                app:layout_constraintTop_toBottomOf="@+id/imageView_user_segunda_tela">-->
-
-<!--                <com.google.android.material.textfield.TextInputEditText-->
-<!--                    android:id="@+id/editText_nome_cadastro"-->
-<!--                    android:layout_width="match_parent"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:background="@color/white"/>-->
-
-<!--            </com.google.android.material.textfield.TextInputLayout>-->
 <!--            // Text Quantidade de pessoas-->
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/edit_quantidade_pessoas"
@@ -133,7 +98,6 @@
 
 <!--            // Text Frequencia de compras-->
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/textInputLayout"
                 style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -152,7 +116,6 @@
 
             </com.google.android.material.textfield.TextInputLayout>
 
-
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btn_voltar_segunda_tela"
                 android:layout_width="wrap_content"
@@ -161,7 +124,7 @@
                 android:paddingLeft="16dp"
                 android:paddingRight="16dp"
                 android:layout_margin="16dp"
-                android:text="Voltar"
+                android:text="@string/voltar_segunda_tela"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintLeft_toLeftOf="parent"/>
 
@@ -173,14 +136,17 @@
                 android:backgroundTint="@color/color_button"
                 android:paddingLeft="16dp"
                 android:paddingRight="16dp"
-                android:text="Salvar"
+                android:text="@string/salvar_segunda_tela"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintRight_toRightOf="parent"/>
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
+    <data>
 
+
+    </data>
 </layout>
 
 
