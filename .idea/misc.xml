@@ -5,11 +5,27 @@
       <map>
         <entry key="..\:/Users/beatrizlima/Documents/Dont_Waste_App/Dont_Waste_App/app/src/main/res/layout/activity_home_nao_logada.xml" value="0.2015625" />
         <entry key="..\:/Users/beatrizlima/Documents/Dont_Waste_App/Dont_Waste_App/app/src/main/res/layout/activity_main.xml" value="0.2015625" />
-        <entry key="..\:/Users/gustavotorres/Documents/Projeto BRQ/Dont_Waste_App/app/src/main/res/layout/activity_cadastro.xml" value="0.33" />
+        <entry key="..\:/Users/carmog/AndroidStudioProjects/Projeto/app/src/main/res/drawable/shape_segunda_tela_cadastro.xml" value="0.10520833333333333" />
+        <entry key="..\:/Users/carmog/AndroidStudioProjects/Projeto/app/src/main/res/layout/activity_cadastro.xml" value="0.1" />
+        <entry key="..\:/Users/carmog/AndroidStudioProjects/Projeto/app/src/main/res/layout/activity_home_nao_logada.xml" value="0.1" />
+        <entry key="..\:/Users/carmog/AndroidStudioProjects/Projeto/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/carmog/AndroidStudioProjects/Projeto/app/src/main/res/layout/activity_segunda_tela_de_cadastro.xml" value="0.1" />
+        <entry key="..\:/Users/carmog/AndroidStudioProjects/Projeto/app/src/main/res/layout/activity_splash.xml" value="0.1" />
+        <entry key="..\:/Users/carmog/AndroidStudioProjects/Projeto/app/src/main/res/layout/fragment_splash.xml" value="0.18" />
+        <entry key="..\:/Users/carmog/AndroidStudioProjects/Projeto/app/src/main/res/layout/home_nao_logada_fragment.xml" value="0.14358974358974358" />
+        <entry key="..\:/Users/carmog/AndroidStudioProjects/Projeto/app/src/main/res/layout/splashi_fragment.xml" value="0.1" />
+        <entry key="..\:/Users/gustavotorres/Documents/Projeto BRQ/Dont_Waste_App/app/src/main/res/layout/activity_cadastro.xml" value="0.12771739130434784" />
         <entry key="..\:/Users/gustavotorres/Documents/Projeto BRQ/Dont_Waste_App/app/src/main/res/layout/activity_home_nao_logada.xml" value="0.12771739130434784" />
         <entry key="..\:/Users/gustavotorres/Documents/Projeto BRQ/Dont_Waste_App/app/src/main/res/layout/activity_segunda_tela_de_cadastro.xml" value="0.25" />
-        <entry key="..\:/Users/gustavotorres/Documents/Projeto BRQ/Dont_Waste_App/app/src/main/res/layout/activity_splash.xml" value="0.12771739130434784" />
         <entry key="..\:/Users/gustavotorres/Documents/Projeto BRQ/Dont_Waste_App/app/src/main/res/layout/list_item.xml" value="0.12771739130434784" />
+        <entry key="..\:/Users/tallesmello/OneDrive - BRQ/Documentos/Dont_Waste_App/app/src/main/res/drawable/bordar_costumizado.xml" value="0.3828125" />
+        <entry key="..\:/Users/tallesmello/OneDrive - BRQ/Documentos/Dont_Waste_App/app/src/main/res/layout-v21/activity_home_nao_logada.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/tallesmello/OneDrive - BRQ/Documentos/Dont_Waste_App/app/src/main/res/layout-v21/activity_segunda_tela_de_cadastro.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/tallesmello/OneDrive - BRQ/Documentos/Dont_Waste_App/app/src/main/res/layout/activity_cadastro.xml" value="0.33" />
+        <entry key="..\:/Users/tallesmello/OneDrive - BRQ/Documentos/Dont_Waste_App/app/src/main/res/layout/activity_home_nao_logada.xml" value="0.33" />
+        <entry key="..\:/Users/tallesmello/OneDrive - BRQ/Documentos/Dont_Waste_App/app/src/main/res/layout/activity_segunda_tela_de_cadastro.xml" value="0.33" />
+        <entry key="..\:/Users/tallesmello/OneDrive - BRQ/Documentos/Dont_Waste_App/app/src/main/res/layout/activity_splash.xml" value="0.25" />
+        <entry key="..\:/Users/tallesmello/OneDrive - BRQ/Documentos/Dont_Waste_App/app/src/main/res/layout/list_item.xml" value="0.36666666666666664" />
       </map>
     </option>
   </component>
