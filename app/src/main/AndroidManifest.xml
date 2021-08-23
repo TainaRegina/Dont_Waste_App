@@ -13,7 +13,7 @@
             android:name=".activity.SplashActivity"
             android:exported="true" />
         <activity
-            android:name=".MainActivity"
+            android:name=".activity.ContainerActivity"
             android:exported="true" />
         <activity
             android:name=".activity.CadastroActivity"

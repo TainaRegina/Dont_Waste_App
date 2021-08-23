@@ -3,9 +3,6 @@ package com.example.projeto_dont_waste.activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.projeto_dont_waste.MainActivity
-import com.example.projeto_dont_waste.R
-import com.example.projeto_dont_waste.databinding.ActivityCadastroBinding
 import com.example.projeto_dont_waste.databinding.ActivityHomeNaoLogadaBinding
 
 
@@ -38,7 +35,7 @@ class HomeNaoLogadaActivity : AppCompatActivity() {
 
     fun fazerLogin() {
         binding.buttonLogin.setOnClickListener {
-            startActivity(Intent(this, MainActivity::class.java))
+            startActivity(Intent(this, ContainerActivity::class.java))
 
         }
 

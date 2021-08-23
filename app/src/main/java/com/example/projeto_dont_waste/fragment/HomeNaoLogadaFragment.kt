@@ -1,30 +1,32 @@
 package com.example.projeto_dont_waste.fragment
 
-import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import androidx.fragment.app.Fragment
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProvider
 import com.example.projeto_dont_waste.R
-import com.example.projeto_dont_waste.databinding.ActivityHomeNaoLogadaBinding
+import com.example.projeto_dont_waste.databinding.HomeNaoLogadaFragmentBinding
 import com.example.projeto_dont_waste.viewmodel.HomeNaoLogadaViewModel
+
 
 class HomeNaoLogadaFragment : Fragment() {
 
     companion object {
         fun newInstance() = HomeNaoLogadaFragment()
     }
-private lateinit var binding: ActivityHomeNaoLogadaBinding
+private lateinit var binding: HomeNaoLogadaFragmentBinding
     private lateinit var viewModel: HomeNaoLogadaViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding =
-            DataBindingUtil.inflate(inflater, R.layout.activity_home_nao_logada, container, false)
+            DataBindingUtil.inflate(inflater, R.layout.home_nao_logada_fragment, container, false)
         return binding.root
     }
 
@@ -33,6 +35,25 @@ private lateinit var binding: ActivityHomeNaoLogadaBinding
         viewModel = ViewModelProvider(this).get(HomeNaoLogadaViewModel::class.java)
         binding.viewmodel = viewModel
 
+        viewModel.buttonLogin.observe(viewLifecycleOwner, Observer {
+            it.setOnClickListener {
+                parentFragmentManager
+                    .beginTransaction()
+                    .addToBackStack("LoginFragments")
+                    .replace(R.id.container_fragment,LoginFragment())
+                    .commit()
+            }
+        })
+
+        viewModel.buttonPrimeiroAcesso.observe(viewLifecycleOwner, Observer {
+            it.setOnClickListener {
+                parentFragmentManager
+                    .beginTransaction()
+                    .addToBackStack("Cadastro")
+                    .replace(R.id.container_fragment,CadastroFragment())
+                    .commit()
+            }
+        })
 
     }
 }

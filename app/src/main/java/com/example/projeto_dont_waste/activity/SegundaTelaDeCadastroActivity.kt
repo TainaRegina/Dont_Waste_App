@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import android.widget.Toast.LENGTH_SHORT
-import com.example.projeto_dont_waste.MainActivity
 import com.example.projeto_dont_waste.R
 import android.widget.ArrayAdapter
 import com.example.projeto_dont_waste.databinding.ActivitySegundaTelaDeCadastroBinding
@@ -98,7 +97,7 @@ class SegundaTelaDeCadastroActivity : AppCompatActivity() {
             if (nome.isEmpty() || pessoas.isEmpty() || data.isEmpty() || compras.isEmpty()){
                 Toast.makeText(this, "Preencha todos os dados", Toast.LENGTH_SHORT).show()
             }else{
-                startActivity(Intent(this, MainActivity::class.java ))
+                startActivity(Intent(this, ContainerActivity::class.java ))
                 Toast.makeText(this, "Salvo com Sucesso", LENGTH_SHORT).show()
             }
 

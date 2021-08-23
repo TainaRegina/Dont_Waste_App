@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
-import com.example.projeto_dont_waste.MainActivity
 import com.example.projeto_dont_waste.R
 
 class SplashActivity : AppCompatActivity() {
@@ -14,7 +13,7 @@ class SplashActivity : AppCompatActivity() {
         setContentView(R.layout.activity_splash)
 
         Handler(Looper.myLooper()!!).postDelayed({
-            Intent(this, MainActivity::class.java).apply {
+            Intent(this, ContainerActivity::class.java).apply {
                 startActivity(this)
                 finish()
             }
