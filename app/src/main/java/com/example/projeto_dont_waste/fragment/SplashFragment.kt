@@ -22,13 +22,11 @@ class SplashFragment : Fragment() {
     companion object {
         fun newInstance() = SplashFragment()
     }
-
-    private lateinit var viewModel: SplashViewModel
     private lateinit var binding: SplashFragmentBinding
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View?{
         binding = DataBindingUtil.inflate(inflater,R.layout.splash_fragment,container,false)
         return binding.root
 
@@ -36,20 +34,13 @@ class SplashFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-       viewModel = ViewModelProvider(this).get(SplashViewModel::class.java)
-       binding.viewmodel = viewModel
-
-    }
-
-    override fun onResume() {
-        super.onResume()
         Handler(Looper.myLooper()!!).postDelayed({
-
             parentFragmentManager
                 .beginTransaction()
                 .replace(R.id.container_fragment,HomeNaoLogadaFragment())
                 .commit()
         },5000)
+
 
     }
 

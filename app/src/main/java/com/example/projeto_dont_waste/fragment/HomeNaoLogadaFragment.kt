@@ -18,7 +18,8 @@ class HomeNaoLogadaFragment : Fragment() {
     companion object {
         fun newInstance() = HomeNaoLogadaFragment()
     }
-private lateinit var binding: HomeNaoLogadaFragmentBinding
+
+    private lateinit var binding: HomeNaoLogadaFragmentBinding
     private lateinit var viewModel: HomeNaoLogadaViewModel
 
     override fun onCreateView(
@@ -33,25 +34,18 @@ private lateinit var binding: HomeNaoLogadaFragmentBinding
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         viewModel = ViewModelProvider(this).get(HomeNaoLogadaViewModel::class.java)
+        binding.lifecycleOwner = this
         binding.viewmodel = viewModel
 
         viewModel.buttonLogin.observe(viewLifecycleOwner, Observer {
             it.setOnClickListener {
-                parentFragmentManager
-                    .beginTransaction()
-                    .addToBackStack("LoginFragments")
-                    .replace(R.id.container_fragment,LoginFragment())
-                    .commit()
+                viewModel.onClickTelaLogin()
             }
         })
 
         viewModel.buttonPrimeiroAcesso.observe(viewLifecycleOwner, Observer {
             it.setOnClickListener {
-                parentFragmentManager
-                    .beginTransaction()
-                    .addToBackStack("Cadastro")
-                    .replace(R.id.container_fragment,CadastroFragment())
-                    .commit()
+                viewModel.onClickTelaCadastro()
             }
         })
 

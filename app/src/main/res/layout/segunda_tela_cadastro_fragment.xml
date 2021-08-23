@@ -8,9 +8,6 @@
         <variable
             name="viewmodel"
             type="com.example.projeto_dont_waste.viewmodel.SegundaTelaCadastroViewModel" />
-
-
-
     </data>
 
 
@@ -67,7 +64,7 @@
                 android:id="@+id/editText_nome_cadastro"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@{Nome.component3()}"/>
+                android:text="@{}"/>
 
         </com.google.android.material.textfield.TextInputLayout>
 

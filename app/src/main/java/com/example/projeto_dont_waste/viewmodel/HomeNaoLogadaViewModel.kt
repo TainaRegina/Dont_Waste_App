@@ -8,6 +8,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.projeto_dont_waste.R
+import com.example.projeto_dont_waste.fragment.CadastroFragment
 import com.example.projeto_dont_waste.fragment.HomeNaoLogadaFragment
 import com.example.projeto_dont_waste.fragment.LoginFragment
 
@@ -22,13 +23,14 @@ class HomeNaoLogadaViewModel : ViewModel() {
     val buttonLogin: LiveData<AppCompatButton>
         get() = _buttonLogin
 
-    fun onClickTelaHome() {
-        fragmentManager.beginTransaction()
-            .replace(R.id.container_fragment, HomeNaoLogadaFragment()).commit()
+    fun onClickTelaCadastro() {
+        fragmentManager.beginTransaction().addToBackStack("Cadastro")
+            .add(R.id.container_fragment, CadastroFragment()).commit()
     }
+
     fun onClickTelaLogin() {
-        fragmentManager.beginTransaction()
-            .replace(R.id.container_fragment, LoginFragment()).commit()
+        fragmentManager.beginTransaction().addToBackStack("Login")
+            .add(R.id.container_fragment, LoginFragment()).commit()
     }
 
     override fun onCleared() {

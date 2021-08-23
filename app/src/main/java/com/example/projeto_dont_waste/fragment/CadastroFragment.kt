@@ -30,9 +30,4 @@ class CadastroFragment : Fragment() {
         // TODO: Use the ViewModel
     }
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-
-    }
-
 }

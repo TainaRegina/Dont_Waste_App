@@ -1,12 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.fragment.app.FragmentContainerView
-    android:id="@+id/container_fragment"
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_margin="25dp"
-    android:layout_height="match_parent"
-    tools:context=".activity.ContainerActivity">
+    xmlns:tools="http://schemas.android.com/tools">
 
-</androidx.fragment.app.FragmentContainerView>
+    <data>
+        <variable
+            name="viewmodel"
+            type="com.example.projeto_dont_waste.viewmodel.ContainerViewModel" />
+    </data>
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/container_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".activity.ContainerActivity">
+
+    </androidx.fragment.app.FragmentContainerView>
+</layout>
