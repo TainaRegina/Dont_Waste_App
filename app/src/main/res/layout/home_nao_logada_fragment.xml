@@ -3,13 +3,21 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <data>
+
+        <variable
+            name="viewmodel"
+            type="com.example.projeto_dont_waste.viewmodel.HomeNaoLogadaViewModel" />
+
+    </data>
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".activity.HomeNaoLogadaActivity"
+        tools:context=".fragment.HomeNaoLogadaFragment"
         tools:ignore="ExtraText">
 
-<!--        // Imagem de fundo-->
+        <!--        // Imagem de fundo-->
 
         <ImageView
             android:id="@+id/imageView_marca_dagua"
@@ -23,21 +31,21 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.0" />
 
-<!--        // Imagem da Lixeira "Logotipo"-->
+        <!--        // Imagem da Lixeira "Logotipo"-->
 
         <ImageView
             android:id="@+id/imageView_logo_lixeira"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
+            android:layout_marginStart="16dp"
             android:layout_marginLeft="16dp"
+            android:layout_marginTop="32dp"
             android:src="@drawable/logo_sem_fundo"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginStart="16dp" />
+            app:layout_constraintTop_toTopOf="parent" />
 
-<!--        // Texto "Don't Waste"-->
+        <!--        // Texto "Don't Waste"-->
 
         <TextView
             android:id="@+id/text_campo_nome_do_app"
@@ -52,7 +60,7 @@
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageView_logo_lixeira" />
 
-<!--        // Texto "Organize"-->
+        <!--        // Texto "Organize"-->
 
         <TextView
             android:id="@+id/text_campo_nome_complementar_do_app"
@@ -67,7 +75,7 @@
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/text_campo_nome_do_app" />
 
-<!--        // Texto "Sua despensa inteligente"-->
+        <!--        // Texto "Sua despensa inteligente"-->
 
         <TextView
             android:id="@+id/text_slogan_do_app"
@@ -76,14 +84,14 @@
             android:layout_marginTop="64dp"
             android:fontFamily="@font/open_sans_bold"
             android:gravity="center"
-            android:text="@string/sua_despensa_inteligente"
+            android:text="Home Nao logada Fragment"
             android:textColor="@color/cor_texto"
             android:textSize="40dp"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/text_campo_nome_complementar_do_app"/>
+            app:layout_constraintTop_toBottomOf="@+id/text_campo_nome_complementar_do_app" />
 
-        // Botão Primeiro Acesso
+<!--        // Botão Primeiro Acesso-->
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/button_primeiro_acesso"
@@ -91,12 +99,13 @@
             android:layout_height="48dp"
             android:layout_margin="16dp"
             android:fontFamily="@font/open_sans_bold"
+            android:onClick="@{()-> viewmodel.onClickTelaCadastro()}"
             android:text="@string/primeiro_acesso"
-            app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toRightOf="@+id/button_login"/>
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/button_login" />
 
-        // Botão Login
+<!--        // Botão Login-->
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/button_login"
@@ -105,15 +114,12 @@
             android:layout_margin="16dp"
             android:backgroundTint="@color/color_button"
             android:fontFamily="@font/open_sans_bold"
+            android:onClick="@{()-> viewmodel.onClickTelaLogin()}"
             android:text="Login"
             android:textSize="15sp"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"/>
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <data>
-
-
-    </data>
 </layout>
