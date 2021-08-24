@@ -10,6 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Projeto_Dont_Waste" >
         <activity
+<<<<<<< HEAD
             android:name=".activity.SplashActivity"
             android:screenOrientation="portrait"
             android:exported="true" />
@@ -27,6 +28,9 @@
             android:exported="true" />
         <activity
             android:name=".activity.HomeNaoLogadaActivity"
+=======
+            android:name=".activity.ContainerActivity"
+>>>>>>> feature_validacao
             android:screenOrientation="portrait"
             android:exported="true" >
             <intent-filter>

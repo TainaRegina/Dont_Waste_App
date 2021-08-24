@@ -15,4 +15,6 @@
     <string name="senha_login">Senha</string>
     <string name="voltar_segunda_tela">Voltar</string>
     <string name="salvar_segunda_tela">Salvar</string>
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
