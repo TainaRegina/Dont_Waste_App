@@ -10,6 +10,7 @@ import com.example.projeto_dont_waste.R
 import android.widget.ArrayAdapter
 import android.widget.Button
 import android.widget.EditText
+import androidx.databinding.DataBindingUtil
 import com.example.projeto_dont_waste.databinding.ActivitySegundaTelaDeCadastroBinding
 import com.google.android.material.datepicker.MaterialDatePicker
 import com.google.android.material.textfield.TextInputEditText
@@ -20,12 +21,12 @@ class SegundaTelaDeCadastroActivity : AppCompatActivity() {
 
 
     private lateinit var binding: ActivitySegundaTelaDeCadastroBinding
-
+    private lateinit var nome: String
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivitySegundaTelaDeCadastroBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_segunda_tela_de_cadastro)
+
 
 
         /**transição para tela de home e retorno para primeira tela de cadastro
@@ -83,9 +84,16 @@ class SegundaTelaDeCadastroActivity : AppCompatActivity() {
 
     }
 
+    private fun voltarHome() {
+        binding.imageViewHome.setOnClickListener {
+            startActivity(Intent(this, HomeNaoLogadaActivity::class.java))
+
+        }
+         }
+
 
     fun voltarTelaCadastro() {
-        binding.btVoltar.setOnClickListener {
+        binding.btnVoltarSegundaTela.setOnClickListener {
             startActivity(Intent(this, CadastroActivity::class.java))
 
         }
@@ -93,25 +101,34 @@ class SegundaTelaDeCadastroActivity : AppCompatActivity() {
 
 
     fun salvar() {
-        binding.btSalvar.setOnClickListener {
+
+        binding.btnVoltarSegundaTela.setOnClickListener {
             startActivity(Intent(this, MainActivity::class.java))
             Toast.makeText(this, "Salvo com Sucesso", LENGTH_SHORT).show()
 
+            binding.btnSalvarSegundaTela.setOnClickListener {
+                val nome = binding.editTextNomeCadastro?.text.toString()
+                val pessoas = binding.textViewQuantidadePessoas.text.toString()
+                val data = binding.editTextDataUltimaCompra.text.toString()
+                val compras = binding.textInputFrequenciaCompras.text.toString()
+
+                if (nome.isEmpty() || pessoas.isEmpty() || data.isEmpty() || compras.isEmpty()) {
+                    Toast.makeText(this, "Preencha todos os dados", Toast.LENGTH_SHORT).show()
+                } else {
+                    startActivity(Intent(this, MainActivity::class.java))
+                    Toast.makeText(this, "Salvo com Sucesso", LENGTH_SHORT).show()
+                }
+
+
+            }
         }
+
+
+
+
     }
 
-
-    fun voltarHome() {
-        binding.imageViewHome.setOnClickListener {
-            startActivity(Intent(this, HomeNaoLogadaActivity::class.java))
-
-        }
-
     }
-}
-
-
-
 
 
 
