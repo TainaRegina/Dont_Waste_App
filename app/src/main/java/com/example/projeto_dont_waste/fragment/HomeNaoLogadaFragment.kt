@@ -11,6 +11,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.example.projeto_dont_waste.R
 import com.example.projeto_dont_waste.databinding.HomeNaoLogadaFragmentBinding
 import com.example.projeto_dont_waste.viewmodel.HomeNaoLogadaViewModel
+import com.example.projeto_dont_waste.viewmodel.HomeNaoLogadaViewModelFactory
 
 
 class HomeNaoLogadaFragment : Fragment() {
@@ -33,17 +34,17 @@ class HomeNaoLogadaFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        viewModel = ViewModelProvider(this).get(HomeNaoLogadaViewModel::class.java)
+        viewModel = ViewModelProvider(this,HomeNaoLogadaViewModelFactory(parentFragmentManager)).get(HomeNaoLogadaViewModel::class.java)
         binding.lifecycleOwner = this
         binding.viewmodel = viewModel
 
-        viewModel.buttonLogin.observe(viewLifecycleOwner, Observer {
+        binding.viewmodel!!.buttonLogin.observe(viewLifecycleOwner, Observer {
             it.setOnClickListener {
                 viewModel.onClickTelaLogin()
             }
         })
-
-        viewModel.buttonPrimeiroAcesso.observe(viewLifecycleOwner, Observer {
+        parentFragmentManager
+        binding.viewmodel!!.buttonPrimeiroAcesso.observe(viewLifecycleOwner, Observer {
             it.setOnClickListener {
                 viewModel.onClickTelaCadastro()
             }

@@ -12,8 +12,7 @@ import com.example.projeto_dont_waste.fragment.CadastroFragment
 import com.example.projeto_dont_waste.fragment.HomeNaoLogadaFragment
 import com.example.projeto_dont_waste.fragment.LoginFragment
 
-class HomeNaoLogadaViewModel : ViewModel() {
-    private lateinit var fragmentManager: FragmentManager
+class HomeNaoLogadaViewModel(private val fragmentManager: FragmentManager) : ViewModel() {
 
     private val _buttonPrimeiroAcesso = MutableLiveData<AppCompatButton>()
     val buttonPrimeiroAcesso: LiveData<AppCompatButton>
@@ -25,12 +24,12 @@ class HomeNaoLogadaViewModel : ViewModel() {
 
     fun onClickTelaCadastro() {
         fragmentManager.beginTransaction().addToBackStack("Cadastro")
-            .add(R.id.container_fragment, CadastroFragment()).commit()
+            .replace(R.id.container_fragment, CadastroFragment()).commit()
     }
 
     fun onClickTelaLogin() {
         fragmentManager.beginTransaction().addToBackStack("Login")
-            .add(R.id.container_fragment, LoginFragment()).commit()
+            .replace(R.id.container_fragment, LoginFragment()).commit()
     }
 
     override fun onCleared() {
