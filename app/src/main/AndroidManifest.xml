@@ -9,28 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Projeto_Dont_Waste" >
+
         <activity
-<<<<<<< HEAD
-            android:name=".activity.SplashActivity"
-            android:screenOrientation="portrait"
-            android:exported="true" />
-        <activity
-            android:name=".MainActivity"
-            android:screenOrientation="portrait"
-            android:exported="true" />
-        <activity
-            android:name=".activity.CadastroActivity"
-            android:screenOrientation="portrait"
-            android:exported="true" />
-        <activity
-            android:name=".activity.SegundaTelaDeCadastroActivity"
-            android:screenOrientation="portrait"
-            android:exported="true" />
-        <activity
-            android:name=".activity.HomeNaoLogadaActivity"
-=======
             android:name=".activity.ContainerActivity"
->>>>>>> feature_validacao
             android:screenOrientation="portrait"
             android:exported="true" >
             <intent-filter>

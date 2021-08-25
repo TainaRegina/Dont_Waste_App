@@ -10,6 +10,7 @@
             type="com.example.projeto_dont_waste.viewmodel.CadastroViewModel" />
 
     </data>
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -23,13 +24,13 @@
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_margin="32dp"
+            android:layout_marginStart="32dp"
             android:layout_marginLeft="32dp"
-            android:onClick="@{}"
             android:layout_marginTop="32dp"
+            android:onClick="@{}"
             android:src="@drawable/cadastro_1_icone_home"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginStart="32dp" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <!--        // Imagem Usuario-->
 
@@ -60,13 +61,11 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/editText_email"
-                android:inputType="textEmailAddress"
-<<<<<<< HEAD:app/src/main/res/layout/activity_cadastro.xml
-=======
-                android:text="@{}"
->>>>>>> feature_validacao:app/src/main/res/layout/cadastro_fragment.xml
+
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                android:text="@{}" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -84,12 +83,11 @@
             app:layout_constraintTop_toBottomOf="@+id/textEmail">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:inputType="numberPassword"
                 android:id="@+id/editText_senha"
                 android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:inputType="numberPassword"
-                android:text="@{}"
-                android:layout_height="wrap_content" />
+                android:text="@{}" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -100,13 +98,13 @@
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
             android:layout_marginRight="16dp"
             android:clickable="true"
             android:onClick="@{}"
             android:src="@drawable/cadastro_1_icone_ajuda"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textSenha"
-            android:layout_marginEnd="16dp" />
+            app:layout_constraintTop_toBottomOf="@+id/textSenha" />
 
         <!--        // Botão Proximo-->
 
@@ -114,11 +112,11 @@
             android:id="@+id/buttonProximoCadastro"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_margin="16dp"
             android:backgroundTint="@color/color_button_cinza"
+            android:onClick="@{}"
             android:paddingLeft="16dp"
             android:paddingRight="16dp"
-            android:layout_margin="16dp"
-            android:onClick="@{}"
             android:text="@string/proximo"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />
