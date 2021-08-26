@@ -6,7 +6,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.lifecycle.ViewModel
 import com.example.projeto_dont_waste.R
+import com.example.projeto_dont_waste.databinding.CadastroFragmentBinding
+import com.example.projeto_dont_waste.databinding.HomeNaoLogadaFragmentBinding
 import com.example.projeto_dont_waste.viewmodel.CadastroViewModel
 
 class CadastroFragment : Fragment() {
@@ -16,6 +19,7 @@ class CadastroFragment : Fragment() {
     }
 
     private lateinit var viewModel: CadastroViewModel
+    private lateinit var binding: CadastroFragmentBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -27,7 +31,10 @@ class CadastroFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         viewModel = ViewModelProvider(this).get(CadastroViewModel::class.java)
-        // TODO: Use the ViewModel
+
     }
+
+
+
 
 }
