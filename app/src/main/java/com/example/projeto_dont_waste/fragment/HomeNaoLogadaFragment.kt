@@ -43,7 +43,7 @@ class HomeNaoLogadaFragment : Fragment() {
                 viewModel.onClickTelaLogin()
             }
         })
-        parentFragmentManager
+        
         binding.viewmodel!!.buttonPrimeiroAcesso.observe(viewLifecycleOwner, Observer {
             it.setOnClickListener {
                 viewModel.onClickTelaCadastro()
