@@ -117,7 +117,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
             android:backgroundTint="@color/color_button_cinza"
-            android:onClick="@{() -> viewmodel.clickProximo()}"
+            android:onClick="@{() -> viewmodel.validacaoFinal(context)}"
             android:paddingLeft="16dp"
             android:paddingRight="16dp"
             android:text="@string/proximo"

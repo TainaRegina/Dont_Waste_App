@@ -36,10 +36,12 @@ class CadastroFragment : Fragment() {
         binding.lifecycleOwner = this
         binding.viewmodel = viewModel
 
-        viewModel.botaoProximo.observe(viewLifecycleOwner, Observer {
-            it.setOnClickListener {
-                viewModel.clickProximo(requireContext())
-            }
-        })
+        binding.homeCadastroPrimeiraTela.setOnClickListener{
+            viewModel.clickHome()
+        }
+
+        binding.buttonProximoCadastro.setOnClickListener {
+            viewModel.validacaoFinal(requireContext())
+        }
     }
 }

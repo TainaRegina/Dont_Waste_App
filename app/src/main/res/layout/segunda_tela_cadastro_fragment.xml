@@ -153,7 +153,7 @@
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/white"
                 android:inputType="none"
-                android:onClick="@{()->viewmodel.frequenciaCompra()}"/>
+                android:onClick="@{}"/>
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -169,7 +169,7 @@
             android:text="Voltar"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
-            android:onClick="@{()->viewmodel.botaoVoltar()}"/>
+            android:onClick="@{}"/>
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btn_salvar_segunda_tela"
@@ -182,7 +182,7 @@
             android:text="Salvar"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            android:onClick="@{()->viewmodel.botaoSalvar()}"/>
+            android:onClick="@{}"/>
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
