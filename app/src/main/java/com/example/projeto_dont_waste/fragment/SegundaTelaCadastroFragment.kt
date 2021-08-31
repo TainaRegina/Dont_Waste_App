@@ -41,15 +41,7 @@ class SegundaTelaCadastroFragment : Fragment() {
         viewModel = ViewModelProvider(this, SegundaTelaCadastroViewModelFactory(parentFragmentManager)).get(SegundaTelaCadastroViewModel::class.java)
         binding.lifecycleOwner = this
         binding.viewmodel = viewModel
-        binding.viewmodel.onNomeUsuario.observe(viewLifecycleOwner, Observer {
-          //  binding.editTextNomeCadastro.text = it
-        })
 
-        binding.viewmodel.onBotaoHome.observe(viewLifecycleOwner, Observer {
-            it.setOnClickListener {
-                viewModel.voltarParaHome()
-            }
-        })
 
         binding.editTextDataUltimaCompra.setOnClickListener {
             viewModel.criacaoDatePicker()

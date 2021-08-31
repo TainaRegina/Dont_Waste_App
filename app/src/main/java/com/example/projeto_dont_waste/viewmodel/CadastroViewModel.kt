@@ -1,4 +1,5 @@
 package com.example.projeto_dont_waste.viewmodel
+
 import android.content.Context
 import android.text.TextUtils
 import android.widget.Toast
@@ -39,33 +40,70 @@ class CadastroViewModel(private val fragmentManager: FragmentManager) : ViewMode
         _senha.value = 111111
     }
 
-    fun clickProximo(context: Context) {
-        when {
-            TextUtils.isEmpty(_email.value.toString().trim { it <= ' ' }) -> {
-                exibindoMenssagemEmail(context).show()
+    fun validaSenha(context: Context): Boolean {
+        senha.toString().isEmpty().apply {
+            exibindoMenssagemSenha(context).show()
+        }
+        return true
+    }
+
+    fun validaEmail(context: Context): Boolean {
+        email.toString().isEmpty().apply {
+            exibindoMenssagemEmail(context).show()
+        }
+        return true
+    }
+
+    fun enviandoAoFireBase(context: Context) : Boolean{
+        if (validaEmail(context) && validaSenha(context)) {
+            FirebaseAuth.getInstance().createUserWithEmailAndPassword(
+                _email.value.toString(),
+                _senha.value.toString()
+
+            ).addOnCompleteListener {
+                if(it.isSuccessful) {
+                    FirebaseAuth.getInstance().currentUser
+                    exibindoMenssagemCadastroSucedido(context).show()
+
+                } else {
+                    exibindoMessagemUidFirebase(context, it).show()
+                }
+
             }
-            TextUtils.isEmpty(_senha.value.toString().trim { it <= ' ' }) -> {
-                exibindoMenssagemSenha(context).show()
-            }
-            else -> {
-                _email.value = _email.value.toString().trim { it <= ' ' }
-                _senha.value = _senha.value.toString().toInt()
-                FirebaseAuth.getInstance().createUserWithEmailAndPassword(
-                    _email.toString(),
-                    _senha.toString()
-                )
-                    .addOnCompleteListener { task ->
-                        if (task.isSuccessful) {
-                            val firebaseUser: FirebaseUser = task.result!!.user!!
-                            exibindoMenssagemCadastroSucedido(context).show()
-                            transicaoDeTela()
-                        } else {
-                            exibindoMessagemUidFirebase(context, task).show()
-                        }
-                    }
-            }
+
+        }
+        return true
+
+    }
+    fun validacaoFinal(context: Context){
+        if(enviandoAoFireBase(context)){
+            transicaoDeTela()
         }
     }
+
+//    fun clickProximo(context: Context) {
+//        when {
+//            TextUtils.isEmpty(_email.value.toString().trim { it <= ' ' }) -> {
+//                exibindoMenssagemEmail(context).show()
+//            }
+//            else -> {
+//                _email.value = _email.value.toString().trim { it <= ' ' }
+//                _senha.value = _senha.value.toString().toInt()
+//                FirebaseAuth.getInstance().createUserWithEmailAndPassword(
+//                    _email.toString(),
+//                    _senha.toString()
+//                ).addOnCompleteListener { task ->
+//                    if (task.isSuccessful) {
+//                        val firebaseUser: FirebaseUser = task.result!!.user!!
+//                        exibindoMenssagemCadastroSucedido(context).show()
+//                        transicaoDeTela()
+//                    } else {
+//                        exibindoMessagemUidFirebase(context, task).show()
+//                    }
+//                }
+//            }
+//        }
+//    }
 
     private fun transicaoDeTela() {
         fragmentManager.beginTransaction().addToBackStack("5")

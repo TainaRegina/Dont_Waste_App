@@ -29,8 +29,11 @@ class HomeNaoLogadaViewModel(private val fragmentManager: FragmentManager) : Vie
     }
 
     fun onClickTelaLogin() {
-        fragmentManager.beginTransaction().addToBackStack("Login")
-            .replace(R.id.container_fragment, LoginFragment()).commit()
+        fragmentManager
+            .beginTransaction()
+            .addToBackStack("Login")
+            .replace(R.id.container_fragment, LoginFragment())
+            .commit()
     }
 
     override fun onCleared() {
