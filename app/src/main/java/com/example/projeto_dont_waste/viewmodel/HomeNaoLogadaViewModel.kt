@@ -11,6 +11,7 @@ import com.example.projeto_dont_waste.R
 import com.example.projeto_dont_waste.fragment.CadastroFragment
 import com.example.projeto_dont_waste.fragment.HomeNaoLogadaFragment
 import com.example.projeto_dont_waste.fragment.LoginFragment
+import com.example.projeto_dont_waste.fragment.SegundaTelaCadastroFragment
 
 class HomeNaoLogadaViewModel(private val fragmentManager: FragmentManager) : ViewModel() {
 

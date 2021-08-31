@@ -9,6 +9,10 @@
             name="viewmodel"
             type="com.example.projeto_dont_waste.viewmodel.CadastroViewModel" />
 
+        <variable
+            name="context"
+            type="android.content.Context" />
+
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -27,7 +31,7 @@
             android:layout_marginStart="32dp"
             android:layout_marginLeft="32dp"
             android:layout_marginTop="32dp"
-            android:onClick="@{}"
+            android:onClick="@{() -> viewmodel.clickHome()}"
             android:src="@drawable/cadastro_1_icone_home"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -61,11 +65,10 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/editText_email"
-
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textEmailAddress"
-                android:text="@{}" />
+                android:text="@{viewmodel.email}" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -87,7 +90,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="numberPassword"
-                android:text="@{}" />
+                android:text="@{viewmodel.senha}" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -101,7 +104,7 @@
             android:layout_marginEnd="16dp"
             android:layout_marginRight="16dp"
             android:clickable="true"
-            android:onClick="@{}"
+            android:onClick="@{() -> viewmodel.clickAjuda()}"
             android:src="@drawable/cadastro_1_icone_ajuda"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textSenha" />
@@ -114,7 +117,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
             android:backgroundTint="@color/color_button_cinza"
-            android:onClick="@{}"
+            android:onClick="@{() -> viewmodel.clickProximo()}"
             android:paddingLeft="16dp"
             android:paddingRight="16dp"
             android:text="@string/proximo"
