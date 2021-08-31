@@ -1,18 +1,13 @@
 package com.example.projeto_dont_waste.viewmodel
 
-<<<<<<< HEAD
-import androidx.fragment.app.FragmentManager
-=======
+
 import android.content.Context
-import android.widget.Adapter
 import android.widget.ArrayAdapter
-import android.widget.Button
 import androidx.appcompat.widget.AppCompatButton
 import androidx.appcompat.widget.AppCompatImageView
 import androidx.fragment.app.FragmentManager
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
->>>>>>> feature_fragmentSegundaTela
 import androidx.lifecycle.ViewModel
 import com.example.projeto_dont_waste.R
 import com.example.projeto_dont_waste.databinding.SegundaTelaCadastroFragmentBinding
@@ -20,13 +15,11 @@ import com.example.projeto_dont_waste.fragment.HomeNaoLogadaFragment
 import com.google.android.material.datepicker.MaterialDatePicker
 import com.google.android.material.textfield.MaterialAutoCompleteTextView
 import com.google.android.material.textfield.TextInputEditText
-import java.text.SimpleDateFormat
 
 private lateinit var binding: SegundaTelaCadastroFragmentBinding
 private lateinit var viewModel: SegundaTelaCadastroViewModel
 
 class SegundaTelaCadastroViewModel(private val fragmentManager: FragmentManager) : ViewModel() {
-
 
 
     private val _onBotaoHome = MutableLiveData<AppCompatImageView>()
@@ -63,32 +56,34 @@ class SegundaTelaCadastroViewModel(private val fragmentManager: FragmentManager)
 
     }
 
-    fun voltarParaHome(){
-    fragmentManager.beginTransaction().addToBackStack("3").replace(R.id.container_fragment, HomeNaoLogadaFragment()).commit()
+    fun voltarParaHome() {
+        fragmentManager.beginTransaction().addToBackStack("3")
+            .replace(R.id.container_fragment, HomeNaoLogadaFragment()).commit()
     }
 
     fun criacaoListaPessoas(context: Context) {
-    val itemPessoas = listOf("1", "2", "3", "Mais de 3")
-    val Adapter = ArrayAdapter(context, R.layout.list_item, itemPessoas)
-    return binding.textViewQuantidadePessoas.setAdapter(Adapter)
+        val itemPessoas = listOf("1", "2", "3", "Mais de 3")
+        val Adapter = ArrayAdapter(context, R.layout.list_item, itemPessoas)
+        return binding.textViewQuantidadePessoas.setAdapter(Adapter)
     }
 
 
     fun criacaoDatePicker() {
-        val datePicker = MaterialDatePicker.Builder.datePicker().setTitleText("Selecione a data").build()
+        val datePicker =
+            MaterialDatePicker.Builder.datePicker().setTitleText("Selecione a data").build()
         datePicker.show(fragmentManager, "String")
     }
 
-    fun aparecerDatePicker(){
+    fun aparecerDatePicker() {
         binding.editTextDataUltimaCompra.setOnFocusChangeListener { view, isFocused ->
-            if (view.isInTouchMode && isFocused){
+            if (view.isInTouchMode && isFocused) {
                 view.performClick()
             }
         }
     }
 
 
-    fun criacaoListaFrequencia(context: Context){
+    fun criacaoListaFrequencia(context: Context) {
         val itemsFrequencia = listOf("Semanal", "Quinzenal", "Mensal")
         val adapterFrequencia = ArrayAdapter(context, R.layout.list_item, itemsFrequencia)
         return binding.textInputFrequenciaCompras.setAdapter(adapterFrequencia)
@@ -135,9 +130,4 @@ class SegundaTelaCadastroViewModel(private val fragmentManager: FragmentManager)
 //    }
 
 
-
-<<<<<<< HEAD
-class SegundaTelaCadastroViewModel(private val fragmentManager: FragmentManager) : ViewModel() {
-=======
->>>>>>> feature_fragmentSegundaTela
 }
