@@ -38,6 +38,13 @@ class HomeNaoLogadaFragment : Fragment() {
         binding.lifecycleOwner = this
         binding.viewmodel = viewModel
 
+
+        binding.buttonLogin.setOnClickListener{
+            it.setOnClickListener {
+                viewModel.onClickTelaLogin()
+            }
+        }
+
         binding.buttonPrimeiroAcesso.setOnClickListener {
             viewModel.onClickTelaCadastro()
         }

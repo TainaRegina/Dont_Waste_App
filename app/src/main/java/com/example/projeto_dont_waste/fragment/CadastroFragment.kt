@@ -1,5 +1,7 @@
 package com.example.projeto_dont_waste.fragment
 
+import android.app.Application
+import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -11,7 +13,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.example.projeto_dont_waste.R
 import com.example.projeto_dont_waste.databinding.CadastroFragmentBinding
 import com.example.projeto_dont_waste.viewmodel.CadastroViewModel
-import com.example.projeto_dont_waste.viewmodel.CadastroViewModelFactory
+
 
 class CadastroFragment : Fragment() {
     companion object {
@@ -20,6 +22,7 @@ class CadastroFragment : Fragment() {
 
     private lateinit var viewModel: CadastroViewModel
     private lateinit var binding: CadastroFragmentBinding
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -30,18 +33,19 @@ class CadastroFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        viewModel = ViewModelProvider(this, CadastroViewModelFactory(parentFragmentManager)).get(
-            CadastroViewModel::class.java
-        )
+        viewModel = ViewModelProvider(this).get(
+            CadastroViewModel::class.java)
         binding.lifecycleOwner = this
         binding.viewmodel = viewModel
 
         binding.homeCadastroPrimeiraTela.setOnClickListener{
-            viewModel.clickHome()
+            parentFragmentManager.beginTransaction().replace(R.id.activity_container, HomeNaoLogadaFragment()).commit()
         }
 
         binding.buttonProximoCadastro.setOnClickListener {
-            viewModel.validacaoFinal(requireContext())
+           parentFragmentManager.beginTransaction().replace(R.id.activity_container, SegundaTelaCadastroFragment()).commit()
         }
     }
+
+
 }

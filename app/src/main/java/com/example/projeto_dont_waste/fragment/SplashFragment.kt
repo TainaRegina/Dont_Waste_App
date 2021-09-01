@@ -6,20 +6,23 @@ import android.os.Looper
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import com.example.projeto_dont_waste.R
+import com.example.projeto_dont_waste.databinding.SplashFragmentBinding
 
 class SplashFragment : Fragment() {
 
     companion object {
         fun newInstance() = SplashFragment()
     }
-
+    private lateinit var binding: SplashFragmentBinding
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View?{
-    return inflater.inflate(R.layout.splash_fragment, container, false)
+        binding = DataBindingUtil.inflate(inflater,R.layout.splash_fragment,container,false)
+        return binding.root
 
     }
 
@@ -28,7 +31,7 @@ class SplashFragment : Fragment() {
         Handler(Looper.myLooper()!!).postDelayed({
             parentFragmentManager
                 .beginTransaction()
-                .replace(R.id.container_fragment,HomeNaoLogadaFragment())
+                .replace(R.id.activity_container,HomeNaoLogadaFragment())
                 .commit()
         },5000)
 

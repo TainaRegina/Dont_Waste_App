@@ -58,7 +58,7 @@ class SegundaTelaCadastroViewModel(private val fragmentManager: FragmentManager)
 
     fun voltarParaHome() {
         fragmentManager.beginTransaction().addToBackStack("3")
-            .replace(R.id.container_fragment, HomeNaoLogadaFragment()).commit()
+            .replace(R.id.activity_container, HomeNaoLogadaFragment()).commit()
     }
 
     fun criacaoListaPessoas(context: Context) {
@@ -109,9 +109,9 @@ class SegundaTelaCadastroViewModel(private val fragmentManager: FragmentManager)
 //
 //    }
 //
-//    fun botaoVoltar(){
-//
-//    }
+    fun botaoVoltar(){
+
+    }
 //
 //    fun botaoSalvar(){
 //

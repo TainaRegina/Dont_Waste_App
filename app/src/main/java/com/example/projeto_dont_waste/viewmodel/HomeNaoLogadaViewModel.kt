@@ -13,26 +13,32 @@ import com.example.projeto_dont_waste.fragment.HomeNaoLogadaFragment
 import com.example.projeto_dont_waste.fragment.LoginFragment
 import com.example.projeto_dont_waste.fragment.SegundaTelaCadastroFragment
 
-class HomeNaoLogadaViewModel(private val fragmentManager: FragmentManager) : ViewModel() {
+class HomeNaoLogadaViewModel(private val fragmentManager : FragmentManager) : ViewModel() {
 
-    private val _buttonPrimeiroAcesso = MutableLiveData<AppCompatButton>()
-    val buttonPrimeiroAcesso: LiveData<AppCompatButton>
-        get() = _buttonPrimeiroAcesso
 
-    private val _buttonLogin = MutableLiveData<AppCompatButton>()
-    val buttonLogin: LiveData<AppCompatButton>
-        get() = _buttonLogin
+
+    private val _buttonPrimeiroAcesso = MutableLiveData<AppCompatButton ?>()
+    val buttonPrimeiroAcesso: LiveData<AppCompatButton ?> = _buttonPrimeiroAcesso
+       // get() = buttonPrimeiroAcesso
+
+    private val _buttonLogin = MutableLiveData<AppCompatButton?>()
+    val buttonLogin: LiveData<AppCompatButton?> = _buttonLogin
+       // get() = _buttonLogin
 
     fun onClickTelaCadastro() {
-        fragmentManager.beginTransaction().addToBackStack("Cadastro")
-            .replace(R.id.container_fragment, CadastroFragment()).commit()
-    }
+            fragmentManager
+                .beginTransaction()
+                .addToBackStack("Cadastro")
+                .replace(R.id.activity_container, CadastroFragment())
+                .commit()
+        }
+
 
     fun onClickTelaLogin() {
         fragmentManager
             .beginTransaction()
             .addToBackStack("Login")
-            .replace(R.id.container_fragment, LoginFragment())
+            .replace(R.id.activity_container, LoginFragment())
             .commit()
     }
 
